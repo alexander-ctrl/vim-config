@@ -13,7 +13,7 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set encoding=utf-8
-
+set noerrorbells
 set incsearch
 set ignorecase
 set smartcase
@@ -24,11 +24,11 @@ set nowrap
 "don't create swap file
 set noswapfile
 set nobackup
+set nowritebackup
 
 "show result search
 set showmatch
 
-"add columns divicion
 
 syntax on
 colorscheme ron
@@ -82,4 +82,20 @@ function MyDiff()
   endif
 endfunction
 
+call plug#begin()
+" auto complete html
+Plug 'mattn/emmet-vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+"Base
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+"Git
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/gv.vim'
+Plug 'vim-scripts/taglist.vim'
+
+call plug#end()
