@@ -25,13 +25,15 @@ set nowrap
 set noswapfile
 set nobackup
 set nowritebackup
+set noundofile
 
 "show result search
 set showmatch
 
+set termguicolors
 
 syntax on
-colorscheme ron
+set guifont=Consolas:h12
 
 " Close automatic {}[]
 nnoremap <C-Left> :tabprevious<CR>
@@ -85,17 +87,23 @@ endfunction
 call plug#begin()
 " auto complete html
 Plug 'mattn/emmet-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "Base
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'ghifarit53/tokyonight-vim'
 
 "Git
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
-Plug 'vim-scripts/taglist.vim'
+Plug 'neoclide/coc.nvim'
 
 call plug#end()
+
+
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+
+colorscheme tokyonight
+
