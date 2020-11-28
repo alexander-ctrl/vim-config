@@ -98,6 +98,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
 Plug 'neoclide/coc.nvim'
+Plug 'scrooloose/nerdtree'
+
 
 call plug#end()
 
@@ -106,4 +108,4 @@ let g:tokyonight_style = 'night' " available: night, storm
 let g:tokyonight_enable_italic = 1
 
 colorscheme tokyonight
-
+map <C-n> :NERDTreeToggle<CR>
